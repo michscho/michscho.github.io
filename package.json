@@ -1,0 +1,50 @@
+{
+  "name": "hochzeit",
+  "version": "1.0.0",
+  "private": true,
+  "proxy": "http://localhost:9000",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "bootstrap": "^4.0.0",
+    "cryptr": "^3.0.0",
+    "express": "^4.16.2",
+    "flow-bin": "^0.65.0",
+    "morgan": "^1.9.0",
+    "nodemailer": "^4.4.2",
+    "nodemon": "^1.15.0",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-circular-progressbar": "^0.8.0",
+    "react-cookies": "^0.1.0",
+    "react-countdown-now": "^1.3.0",
+    "react-dom": "^16.2.0",
+    "react-fullpage": "^0.1.18",
+    "react-helmet": "^5.2.0",
+    "react-parallax": "^1.6.0",
+    "react-popper": "^0.8.2",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.1",
+    "react-snapshot": "^1.3.0",
+    "react-stickynode": "^1.4.1",
+    "react-transition-group": "^2.2.1",
+    "reactstrap": "^5.0.0-beta",
+    "styled-components": "^3.1.6",
+    "validator": "^9.4.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "start:server": "nodemon server",
+    "build": "react-scripts build",
+    "build:surge": "surge build hoch-zeit.surge.sh",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "eslint": "4.3.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "2.7.0",
+    "eslint-plugin-jsx-a11y": "5.1.1",
+    "eslint-plugin-react": "7.1.0",
+    "prettier-eslint": "^8.0.0"
+  }
+}
