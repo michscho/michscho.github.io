@@ -1,15 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Parallax } from 'react-parallax';
 
 import { Container, Row, Col } from 'reactstrap';
 
-const StyledParallax = styled(Parallax)`
-  position: ${props => (props.fixed ? 'fixed !important' : 'relative')};
-  padding: 80px 0px;
-  width: 100%;
-  bottom: 0;
-`;
 
 const StyledSection = styled.section`
   position: ${props => (props.fixed ? 'fixed !important' : 'relative')};
@@ -61,27 +54,17 @@ const Circle = styled.li`
   }
 `;
 
-const Copyright = styled.div`
-  margin-top: 20px;
-`;
 
 const Footer = props => (
   <StyledSection fixed={props.fixed} className="bg-gray-3">
     <Container>
       <Row>
         <Col md={{ size: 10, offset: 1 }} xs={12} className="text-center">
-          <h1>Danke dir!</h1>
           <Names>
             <li>Annika</li>
             <Circle>&amp;</Circle>
             <li>Robert</li>
           </Names>
-          <Copyright>
-            All Rights Reserved © 2022 |{' '}
-            <a href="http://weetsi.com" target="_blank" rel="noopener noreferrer">
-              Michael Schott
-            </a>
-          </Copyright>
         </Col>
       </Row>
     </Container>

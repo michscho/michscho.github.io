@@ -10,11 +10,11 @@ import RSVP from '../organisms/RSVP';
 
 const HomePage = props => (
   <React.Fragment>
-    <Home />
     <Header {...props} />
+    <Home />
+    <Counter />
     <Couple />
     <Frase />
-    <Counter />
     <RSVP />
   </React.Fragment>
 );

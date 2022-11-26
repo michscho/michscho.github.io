@@ -142,17 +142,13 @@ const SectionTimeLine = () => (
         <Col md={{ size: 8, offset: 2 }} xs={12} className="text-center">
           <div className="title-block">
             <h1>
-              Unsere{' '}
-              <span>
-                <em>Geschichte</em>
-              </span>
+              Der Ablauf{' '}
+              
             </h1>
             <div className="divider" />
             <p>
               <em>
-                Dolor sit amet, consectetur adipiscing elit. Mauris porttitor non sem eu faucibus.
-                Aenean pellentesque dui tincidunt, dictum massa congue, euismod ipsum. Duis auctor
-                in est ac dignissim.
+                Wir haben geheiratet! Das möchten wir gerne am <b>22.07.2023</b> mit einer Gartenparty bei Familie Schott feiern.
               </em>
             </p>
           </div>
@@ -166,16 +162,12 @@ const SectionTimeLine = () => (
           <TimeLinePanel>
             <div className="timeline-heading">
               <TimeLineTitle>
-                May <span>04</span> 2022
+                 <span>15</span>:00 Uhr
               </TimeLineTitle>
             </div>
             <TimeLineBody className="text-center">
-              <img src="http://via.placeholder.com/700x466" className="img-fluid" alt="Unsere Geschichte" />
-              <h2 className="timeline-title">Our first meeting</h2>
-              <p>
-                Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá ,
-                depois divoltis porris, paradis. Paisis, filhis, espiritis santis.
-              </p>
+              <img src="https://www.hochzeitstreff.de/wp-content/uploads/2022/07/shutterstock_221207839.jpg" className="img-fluid" alt="Unsere Geschichte" />
+              <h2 className="timeline-title"><b>Sektempfang</b></h2>
             </TimeLineBody>
           </TimeLinePanel>
         </TimeLineItem>
@@ -186,18 +178,12 @@ const SectionTimeLine = () => (
           <TimeLinePanel inverted>
             <div className="timeline-heading">
               <TimeLineTitle inverted>
-                Dec <span>28</span> 2022
+                 <span>16</span>:00 Uhr
               </TimeLineTitle>
             </div>
             <TimeLineBody className="text-center">
-              <img src="http://via.placeholder.com/700x466" className="img-fluid" alt="Our Story" />
-              <h2 className="timeline-title">Great witer days</h2>
-              <p>
-                Mussum ipsum cacilds, vidis litro abertis. Mauris porttitor non sem eu faucibus.
-                Aenean pellentesque dui tincidunt mauris porttitor non sem eu faucibus. Aenean
-                pellentesque dui tincidunt,Consetis adipiscings elitis. Pra lá , depois divoltis
-                porris, paradis. Paisis, filhis, espiritis santis .
-              </p>
+              <img src="https://www.qiez.de/app/uploads/2017/12/eine-tasse-kaffee-mit-crema-und-dazu-ein-stck-kuchen-auf-einem-weien-porzellan-toa-heftiba-910x511.jpeg" className="img-fluid" alt="Our Story" />
+              <h2 className="timeline-title"><b>Kaffee&Kuchen</b></h2>
             </TimeLineBody>
           </TimeLinePanel>
         </TimeLineItem>
@@ -208,16 +194,12 @@ const SectionTimeLine = () => (
           <TimeLinePanel>
             <div className="timeline-heading">
               <TimeLineTitle>
-                May <span>04</span> 2022
+                <span>18</span>:00 Uhr
               </TimeLineTitle>
             </div>
             <TimeLineBody className="text-center">
-              <img src="http://via.placeholder.com/700x466" className="img-fluid" alt="Our Story" />
-              <h2 className="timeline-title">Our first meeting</h2>
-              <p>
-                Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá ,
-                depois divoltis porris, paradis. Paisis, filhis, espiritis santis.
-              </p>
+              <img src="https://hochzeitdiy.com/wp-content/uploads/2021/02/Gedeck-Hochzeit.jpg" className="img-fluid" alt="Our Story" />
+              <h2 className="timeline-title"><b>Abendessen</b></h2>
             </TimeLineBody>
           </TimeLinePanel>
         </TimeLineItem>
@@ -228,16 +210,28 @@ const SectionTimeLine = () => (
           <TimeLinePanel inverted>
             <div className="timeline-heading">
               <TimeLineTitle inverted>
-                Dec <span>28</span> 2022
+                <span>20</span>:00 Uhr
               </TimeLineTitle>
             </div>
             <TimeLineBody className="text-center">
-              <img src="http://via.placeholder.com/700x466" className="img-fluid" alt="Our Story" />
-              <h2 className="timeline-title">Standesamtliche Heirat</h2>
-              <p>
-                Mussum ipsum cacilds, vidis litro abertis. Mauris porttitor non sem eu faucibus.
-                Aenean pellentesque dui tincidunt mauris porttitor non sem eu faucibus.
-              </p>
+              <img src="https://scontent-muc2-1.xx.fbcdn.net/v/t39.30808-6/308109006_422925329916113_5436940080415561538_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=os-lMEXup-MAX910lF3&_nc_ht=scontent-muc2-1.xx&oh=00_AfB26Vvc6MwTiBJXO2RoLcm6K50ae7rDcLVy7q3uht-CdA&oe=6386FEDD" className="img-fluid" alt="Our Story" />
+              <h2 className="timeline-title"><b>Cocktailbar</b></h2>
+            </TimeLineBody>
+          </TimeLinePanel>
+        </TimeLineItem>
+        <TimeLineItem>
+          <TimeLineBadge>
+            <i className="fas fa-heart" />
+          </TimeLineBadge>
+          <TimeLinePanel>
+            <div className="timeline-heading">
+              <TimeLineTitle>
+                <span>20</span>:30 Uhr
+              </TimeLineTitle>
+            </div>
+            <TimeLineBody className="text-center">
+              <img src="https://www.hochzeitsportal24.de/wp-content/uploads/ratgeber/hochzeitgeschenk-heliumballons/Hochzeit-Luftballons.jpg" className="img-fluid" alt="Our Story" />
+              <h2 className="timeline-title"><b>Hochzeitsfeier</b></h2>
             </TimeLineBody>
           </TimeLinePanel>
         </TimeLineItem>
@@ -250,7 +244,7 @@ const SectionTimeLine = () => (
       <Row>
         <Col md={{ size: 8, offset: 2 }} xs={12} className="text-center">
           <FinalFrase>
-            Jetzt freuen wir uns auf die <span>nächsten Schritte...</span>
+            <span>Open End...</span>
           </FinalFrase>
         </Col>
       </Row>

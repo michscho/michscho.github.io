@@ -128,14 +128,14 @@ const SectionHome = () => (
               <li> Robert</li>
             </Names>
             <Date>
-              <span>01. </span> Juni 2023
+              <span>22. </span> Juli 2023
             </Date>
             <Hour>
-              12:00 <span>pm</span>
+              15<span>:00 Uhr</span>
             </Hour>
             <Place>
-              <h3>Schloss Neuschwarnstein</h3>
-              <p>Sperberstraße 6.</p>
+              <h3>Schweinfurt</h3>
+              <p>Sperberstraße 6</p>
             </Place>
           </Col>
         </Row>

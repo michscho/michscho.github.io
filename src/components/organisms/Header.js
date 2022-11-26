@@ -176,7 +176,7 @@ export default class Header extends React.Component {
                   </li>
                   <li>
                     <StyledLink activeClassName="active" to="/story">
-                      Unsere Geschichte
+                      Ablauf
                     </StyledLink>
                   </li>
                   <li>
