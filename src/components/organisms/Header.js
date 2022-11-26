@@ -170,11 +170,6 @@ export default class Header extends React.Component {
                     </StyledLink>
                   </li>
                   <li>
-                    <StyledLink activeClassName="active" to="/wedding">
-                      Hochzeit
-                    </StyledLink>
-                  </li>
-                  <li>
                     <StyledLink activeClassName="active" to="/story">
                       Ablauf
                     </StyledLink>
@@ -191,15 +186,9 @@ export default class Header extends React.Component {
                   </li>
                   <li>
                     <StyledLink activeClassName="active" to="/rsvp">
-                      Kontakt
+                      Anmeldung
                     </StyledLink>
                   </li>
-                  <li>
-                    <StyledLink activeClassName="active" to="/FAQs">
-                      FAQs
-                    </StyledLink>
-                  </li>
-                  <li>{this.authButton()}</li>
                 </StyledNav>
               </Collapse>
             </Container>

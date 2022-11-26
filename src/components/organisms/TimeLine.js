@@ -28,7 +28,13 @@ const TimeLineBody = styled.div`
   }
   img {
     margin: 30px auto;
+    border-radius: 4px;
   }
+  @media only screen and (max-width: 600px) {
+  b {
+    font-size: 16px;
+  }
+}
 `;
 
 const TimeLineTitle = styled.h2`
