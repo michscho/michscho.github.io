@@ -3,6 +3,7 @@ import SectionGallery from '../organisms/Gallery';
 
 const Gallery = () => (
   <div>
+    
     <SectionGallery />
   </div>
 );

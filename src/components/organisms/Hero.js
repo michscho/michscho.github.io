@@ -114,13 +114,13 @@ const StyledSection = styled.section`
   }
 `;
 const SectionHome = () => (
-  <Parallax blur={9} bgImage={'https://personalbuckettemp.s3.eu-central-1.amazonaws.com/2022-11-26+11.55.44.jpg'} bgImageAlt="" strength={300}>
+  <Parallax blur={9} bgImage={'https://www.friedatheres.com/wp-content/uploads/2020/06/tischdeko-hochzeit-1-1100x733.jpg'} bgImageAlt="" strength={300}>
     <StyledSection>
       <Container>
         <Row>
           <Col xs={12}>
             <Title>
-              <span />Wir sagen Ja!<span />
+              <span />Wir haben JA gesagt!<span />
             </Title>
             <Names>
               <li>Annika </li>

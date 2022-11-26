@@ -24,8 +24,7 @@ const SectionRSVP = () => (
             <div className="divider" />
             <p>
               <em>
-              Bitte wählen Sie die Veranstaltungen aus, die Sie besuchen möchten, und füllen Sie das folgende Formular aus, um das 
-                zu bestätigen.
+              Bitte gebe Uns Bescheid, ob du kommen kannst, vielen Dank!
               </em>
             </p>
           </div>

@@ -118,7 +118,7 @@ export default class Form extends React.Component {
     email: '',
     party: false,
     ceremony: false,
-    formErrors: { name: '', email: '', event: 'Wähle mindestens ein Event aus!' },
+    formErrors: { name: '', email: '', event: '' },
     nameValid: null,
     emailValid: null,
     eventsValid: false,
@@ -139,7 +139,7 @@ export default class Form extends React.Component {
     const fieldValidationErrors = this.state.formErrors;
     let nameValid = this.state.nameValid;
     let emailValid = this.state.emailValid;
-    let eventsValid = this.state.eventsValid;
+    //let eventsValid = this.state.eventsValid;
 
     switch (fieldName) {
       case 'name':
@@ -150,10 +150,9 @@ export default class Form extends React.Component {
         emailValid = isEmail(value);
         // fieldValidationErrors.email = emailValid ? '' : ' is invalid';
         break;
-      case 'party':
       case 'ceremony':
-        eventsValid = this.state.party || this.state.ceremony;
-        fieldValidationErrors.event = eventsValid ? '' : 'You need to select at least one';
+        //eventsValid = this.state.ceremony;
+        // fieldValidationErrors.event = eventsValid ? '' : 'Bitte wähle ein Event aus!';
         break;
       default:
         break;
@@ -164,7 +163,7 @@ export default class Form extends React.Component {
         formErrors: fieldValidationErrors,
         emailValid,
         nameValid,
-        eventsValid,
+        eventsValid: true,
       },
       () => {
         this.validateForm();
@@ -207,28 +206,6 @@ export default class Form extends React.Component {
               checked={this.state.ceremony}
               onChange={this.handleInputChange}
             />
-            <StyledLabel htmlFor="checkbox-1">
-            Zeremonie
-              <p>
-                München 80799 <br />Brauerrei.
-              </p>
-            </StyledLabel>
-          </Col>
-          <Col md={6} className="text-center">
-            <StyledInput
-              id="checkbox-2"
-              type="checkbox"
-              name="party"
-              value="Party"
-              checked={this.state.party}
-              onChange={this.handleInputChange}
-            />
-            <StyledLabel htmlFor="checkbox-2">
-              Party
-              <p>
-                München, Kirchstraße <br /> Bierstube.
-              </p>
-            </StyledLabel>
           </Col>
         </Row>
 
@@ -258,7 +235,7 @@ export default class Form extends React.Component {
                 onChange={this.handleInputChange}
                 valid={this.state.emailValid}
               />
-              <FormFeedback className="top-mrg-10">Oh nein! Die Email ist ungültig.</FormFeedback>
+              <FormFeedback className="top-mrg-10">Bitte gebe eine gültige Email Adresse an.</FormFeedback>
             </FormGroup>
           </Col>
         </Row>

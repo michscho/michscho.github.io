@@ -41,6 +41,20 @@ const StyledLink = styled(NavLink)`
   }
 `;
 
+const StyledLinkLast = styled(NavLink)`
+  color: #777;
+  padding: 10px 6px;
+  &.active {
+    color: #c3a180 !important;
+    background: none;
+  }
+  &:hover {
+    color: #333;
+    text-decoration: none;
+    background-color: transparent;
+  }
+`;
+
 const Names = styled.ul`
   color: #777;
   list-style: none;
@@ -185,9 +199,9 @@ export default class Header extends React.Component {
                     </StyledLink>
                   </li>
                   <li>
-                    <StyledLink activeClassName="active" to="/rsvp">
+                    <StyledLinkLast activeClassName="active" to="/rsvp">
                       Anmeldung
-                    </StyledLink>
+                    </StyledLinkLast>
                   </li>
                 </StyledNav>
               </Collapse>
