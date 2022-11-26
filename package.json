@@ -34,7 +34,7 @@
   "scripts": {
     "start": "react-scripts start",
     "start:server": "nodemon server",
-    "build": "react-scripts build",
+    "build": "CI=false && react-scripts build",
     "build:surge": "surge build hoch-zeit.surge.sh",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
