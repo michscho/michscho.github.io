@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Container, Row, Col } from 'reactstrap';
+import React from "react";
+import styled from "styled-components";
+import { Container, Row, Col } from "reactstrap";
 
-import notFound from '../../404.svg';
+import notFound from "../../404.svg";
 
 const StyledSection = styled.section`
   padding: 120px 0px;
@@ -17,9 +17,8 @@ const NotFoundPage = () => (
     <Container>
       <Row>
         <Col md={5} xs={12} className="text-center">
-          <h1>Just married!</h1>
-          Seite nicht gefunden!
-          <Styled404>404</Styled404>
+          <h1>Finde uns:</h1>
+          Sperberstraße 6, 97422 Schweinfurt
         </Col>
         <Col md={7} xs={12} className="">
           <img src={notFound} className="img-fluid" />

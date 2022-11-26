@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Row,
   Col,
@@ -8,11 +8,11 @@ import {
   Label,
   FormFeedback,
   UncontrolledAlert,
-} from 'reactstrap';
-import isEmail from 'validator/lib/isEmail';
+} from "reactstrap";
+import isEmail from "validator/lib/isEmail";
 
-import styled from 'styled-components';
-import Telegram from 'telegram-send-message';
+import styled from "styled-components";
+import Telegram from "telegram-send-message";
 
 const StyledFormErrors = styled.div`
   p {
@@ -59,12 +59,12 @@ const StyledForm = styled.form`
 `;
 
 const StyledLabel = styled(Label)`
-  font-family: 'Oswald', Verdana, Geneva, sans-serif;
+  font-family: "Oswald", Verdana, Geneva, sans-serif;
   font-size: 23px;
   cursor: pointer;
   font-weight: normal;
   p {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 300;
     font-size: 14px;
   }
@@ -72,9 +72,9 @@ const StyledLabel = styled(Label)`
     color: #c3a180;
   }
   &::before {
-    font-family: 'Font Awesome 5 Free';
+    font-family: "Font Awesome 5 Free";
     font-weight: regular;
-    content: '\f111';
+    content: "\f111";
     margin-right: 0.3em;
   }
 `;
@@ -90,9 +90,9 @@ const StyledInput = styled(Input)`
       font-weight: normal;
     }
     &::before {
-      font-family: 'Font Awesome 5 Free';
+      font-family: "Font Awesome 5 Free";
       font-weight: 900;
-      content: '\f058';
+      content: "\f058";
     }
   }
 `;
@@ -115,11 +115,11 @@ const StyledButton = styled(Button)`
 
 export default class Form extends React.Component {
   state = {
-    name: '',
-    email: '',
+    name: "",
+    email: "",
     party: false,
     ceremony: false,
-    formErrors: { name: '', email: '' },
+    formErrors: { name: "", email: "" },
     nameValid: null,
     emailValid: null,
     formValid: false,
@@ -128,7 +128,8 @@ export default class Form extends React.Component {
 
   handleInputChange = (e) => {
     const name = e.target.name;
-    const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
+    const value =
+      e.target.type === "checkbox" ? e.target.checked : e.target.value;
 
     this.setState({ [name]: value }, () => {
       this.validateField(name, value);
@@ -141,10 +142,10 @@ export default class Form extends React.Component {
     let emailValid = this.state.emailValid;
 
     switch (fieldName) {
-      case 'name':
+      case "name":
         nameValid = value.length >= 3;
         break;
-      case 'email':
+      case "email":
         emailValid = isEmail(value);
         break;
       default:
@@ -159,7 +160,7 @@ export default class Form extends React.Component {
       },
       () => {
         this.validateForm();
-      },
+      }
     );
   }
 
@@ -180,21 +181,19 @@ export default class Form extends React.Component {
               </UncontrolledAlert>
             );
           }
-          return '';
+          return "";
         })}
       </StyledFormErrors>
     );
 
     function sendTelegramMessage(name, email) {
-      if (process.env.API_KEY) {
-        Telegram.setRecipient('14624857');
-        Telegram.setToken(process.env.API_KEY);
-        Telegram.setMessage(`Name: ${name} Email: ${email}`);
-        Telegram.send();
-        Telegram.setRecipient('258407498');
-        Telegram.setMessage(`Name: ${name} Email: ${email}`);
-        Telegram.send();
-      }
+      Telegram.setRecipient("14624857");
+      Telegram.setToken("5968394167:AAHXHinx3oAYsOkTpbQ-QwlblAlP11sGKms");
+      Telegram.setMessage(`Name: ${name} Email: ${email}`);
+      Telegram.send();
+      Telegram.setRecipient("258407498");
+      Telegram.setMessage(`Name: ${name} Email: ${email}`);
+      Telegram.send();
     }
 
     return (
@@ -213,7 +212,9 @@ export default class Form extends React.Component {
                 valid={this.state.nameValid}
                 onChange={this.handleInputChange}
               />
-              <FormFeedback className="top-mrg-10">Ups! Deine Name ist zu kurz</FormFeedback>
+              <FormFeedback className="top-mrg-10">
+                Ups! Deine Name ist zu kurz
+              </FormFeedback>
             </FormGroup>
           </Col>
           <Col md={6}>
@@ -227,7 +228,9 @@ export default class Form extends React.Component {
                 onChange={this.handleInputChange}
                 valid={this.state.emailValid}
               />
-              <FormFeedback className="top-mrg-10">Bitte gebe eine gültige Email Adresse an.</FormFeedback>
+              <FormFeedback className="top-mrg-10">
+                Bitte gebe eine gültige Email Adresse an.
+              </FormFeedback>
             </FormGroup>
           </Col>
         </Row>
@@ -244,7 +247,12 @@ export default class Form extends React.Component {
             </FormGroup>
           </Col>
         </Row>
-        <StyledButton onClick={() => sendTelegramMessage(this.state.name, this.state.email)} color="primary" size="lg" disabled={!this.state.formValid}>
+        <StyledButton
+          onClick={() => sendTelegramMessage(this.state.name, this.state.email)}
+          color="primary"
+          size="lg"
+          disabled={!this.state.formValid}
+        >
           Ich nehme teil.
         </StyledButton>
       </StyledForm>

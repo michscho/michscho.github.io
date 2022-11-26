@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Parallax } from 'react-parallax';
+import React from "react";
+import styled from "styled-components";
+import { Parallax } from "react-parallax";
 
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row, Col } from "reactstrap";
 
 const Title = styled.h3`
   span {
@@ -15,6 +15,7 @@ const Title = styled.h3`
     border-width: 1px 0px 0px;
     @media (max-width: 767px) {
       width: 17px;
+      margin-top: 10px;
       margin: 7px 5px;
     }
   }
@@ -114,13 +115,22 @@ const StyledSection = styled.section`
   }
 `;
 const SectionHome = () => (
-  <Parallax blur={9} bgImage={'https://www.friedatheres.com/wp-content/uploads/2020/06/tischdeko-hochzeit-1-1100x733.jpg'} bgImageAlt="" strength={300}>
+  <Parallax
+    blur={9}
+    bgImage={
+      "https://www.friedatheres.com/wp-content/uploads/2020/06/tischdeko-hochzeit-1-1100x733.jpg"
+    }
+    bgImageAlt=""
+    strength={300}
+  >
     <StyledSection>
       <Container>
         <Row>
           <Col xs={12}>
             <Title>
-              <span />Wir haben JA gesagt!<span />
+              <span />
+              Wir haben JA gesagt!
+              <span />
             </Title>
             <Names>
               <li>Annika </li>

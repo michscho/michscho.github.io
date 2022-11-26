@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row, Col } from "reactstrap";
 
 const Profile = styled.div`
   img {
@@ -30,11 +30,6 @@ const SectionCouple = () => (
               className="img-fluid rounded-circle"
               alt="Bride"
             />
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porttitor non sem eu
-              faucibus. Aenean pellentesque dui tincidunt, dictum massa congue, euismod ipsum. Duis
-              auctor in est ac dignissim.
-            </p>
           </Profile>
         </Col>
         <Col md={6} xs={12} className="text-center">
@@ -47,11 +42,6 @@ const SectionCouple = () => (
               className="img-fluid rounded-circle"
               alt="Groom"
             />
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porttitor non sem eu
-              faucibus. Aenean pellentesque dui tincidunt, dictum massa congue, euismod ipsum. Duis
-              auctor in est ac dignissim.
-            </p>
           </Profile>
         </Col>
       </Row>
