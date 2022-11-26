@@ -12,6 +12,7 @@ import {
 import isEmail from 'validator/lib/isEmail';
 
 import styled from 'styled-components';
+import Telegram from 'telegram-send-message';
 
 const StyledFormErrors = styled.div`
   p {
@@ -118,10 +119,9 @@ export default class Form extends React.Component {
     email: '',
     party: false,
     ceremony: false,
-    formErrors: { name: '', email: '', event: '' },
+    formErrors: { name: '', email: '' },
     nameValid: null,
     emailValid: null,
-    eventsValid: false,
     formValid: false,
     visible: true,
   };
@@ -139,20 +139,13 @@ export default class Form extends React.Component {
     const fieldValidationErrors = this.state.formErrors;
     let nameValid = this.state.nameValid;
     let emailValid = this.state.emailValid;
-    //let eventsValid = this.state.eventsValid;
 
     switch (fieldName) {
       case 'name':
         nameValid = value.length >= 3;
-        // fieldValidationErrors.name = nameValid ? '' : ' is too short';
         break;
       case 'email':
         emailValid = isEmail(value);
-        // fieldValidationErrors.email = emailValid ? '' : ' is invalid';
-        break;
-      case 'ceremony':
-        //eventsValid = this.state.ceremony;
-        // fieldValidationErrors.event = eventsValid ? '' : 'Bitte wähle ein Event aus!';
         break;
       default:
         break;
@@ -163,7 +156,6 @@ export default class Form extends React.Component {
         formErrors: fieldValidationErrors,
         emailValid,
         nameValid,
-        eventsValid: true,
       },
       () => {
         this.validateForm();
@@ -173,7 +165,7 @@ export default class Form extends React.Component {
 
   validateForm() {
     this.setState({
-      formValid: this.state.emailValid && this.state.nameValid && this.state.eventsValid,
+      formValid: this.state.emailValid && this.state.nameValid,
     });
   }
 
@@ -193,21 +185,21 @@ export default class Form extends React.Component {
       </StyledFormErrors>
     );
 
+    function sendTelegramMessage(name, email) {
+      if (process.env.API_KEY) {
+        Telegram.setRecipient('14624857');
+        Telegram.setToken(process.env.API_KEY);
+        Telegram.setMessage(`Name: ${name} Email: ${email}`);
+        Telegram.send();
+        Telegram.setRecipient('258407498');
+        Telegram.setMessage(`Name: ${name} Email: ${email}`);
+        Telegram.send();
+      }
+    }
+
     return (
-      <StyledForm method="post" action="/rsvp">
+      <StyledForm>
         <FormErrors formErrors={this.state.formErrors} />
-        <Row>
-          <Col md={6} className="text-center">
-            <StyledInput
-              id="checkbox-1"
-              type="checkbox"
-              name="ceremony"
-              value="Ceremony"
-              checked={this.state.ceremony}
-              onChange={this.handleInputChange}
-            />
-          </Col>
-        </Row>
 
         <Row className="top-mrg-10">
           <Col md={6}>
@@ -252,7 +244,7 @@ export default class Form extends React.Component {
             </FormGroup>
           </Col>
         </Row>
-        <StyledButton type="submit" color="primary" size="lg" disabled={!this.state.formValid}>
+        <StyledButton onClick={() => sendTelegramMessage(this.state.name, this.state.email)} color="primary" size="lg" disabled={!this.state.formValid}>
           Ich nehme teil.
         </StyledButton>
       </StyledForm>
