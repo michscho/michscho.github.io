@@ -1,4 +1,4 @@
-import { injectGlobal } from 'styled-components';
+import { injectGlobal } from "styled-components";
 
 const globalStyles = () => injectGlobal`
 body {
@@ -21,6 +21,7 @@ h3,
 h4,
 h5,
 h6, {
+  margin-top: 105px;
   font-family: "Oswald", Verdana, Geneva, sans-serif;
 }
 h1 span,

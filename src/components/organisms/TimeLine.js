@@ -102,7 +102,7 @@ const TimeLinePanel = styled.div`
 `;
 
 const TimeLineItem = styled.li`
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   position: relative;
   margin-top: -25%;
   &:before {
@@ -190,7 +190,10 @@ const SectionTimeLine = () => (
           <TimeLinePanel inverted>
             <div className="timeline-heading">
               <TimeLineTitle inverted>
-                <span><b>16</b></span>:00 Uhr
+                <span>
+                  <b>16</b>
+                </span>
+                :00 Uhr
               </TimeLineTitle>
             </div>
             <TimeLineBody className="text-center">
@@ -212,7 +215,10 @@ const SectionTimeLine = () => (
           <TimeLinePanel>
             <div className="timeline-heading">
               <TimeLineTitle>
-                <span><b>18</b></span>:00 Uhr
+                <span>
+                  <b>18</b>
+                </span>
+                :00 Uhr
               </TimeLineTitle>
             </div>
             <TimeLineBody className="text-center">
@@ -234,7 +240,10 @@ const SectionTimeLine = () => (
           <TimeLinePanel inverted>
             <div className="timeline-heading">
               <TimeLineTitle inverted>
-                <span><b>20</b></span>:00 Uhr
+                <span>
+                  <b>20</b>
+                </span>
+                :00 Uhr
               </TimeLineTitle>
             </div>
             <TimeLineBody className="text-center">
@@ -256,7 +265,10 @@ const SectionTimeLine = () => (
           <TimeLinePanel>
             <div className="timeline-heading">
               <TimeLineTitle>
-                <span><b>20</b></span>:30 Uhr
+                <span>
+                  <b>20</b>
+                </span>
+                :30 Uhr
               </TimeLineTitle>
             </div>
             <TimeLineBody className="text-center">

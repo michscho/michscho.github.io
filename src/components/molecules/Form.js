@@ -7,22 +7,12 @@ import {
   Input,
   Label,
   FormFeedback,
-  UncontrolledAlert,
 } from "reactstrap";
 import isEmail from "validator/lib/isEmail";
 
 import styled from "styled-components";
 import Telegram from "telegram-send-message";
 
-const StyledFormErrors = styled.div`
-  p {
-    display: block;
-    width: 100%;
-    margin: 0px;
-    font-size: 80%;
-    color: #dc3545;
-  }
-`;
 const StyledForm = styled.form`
   input,
   textarea {
@@ -79,24 +69,6 @@ const StyledLabel = styled(Label)`
   }
 `;
 
-const StyledInput = styled(Input)`
-  display: none;
-
-  &:checked + ${StyledLabel} {
-    color: #c3a180;
-    font-size: 24px;
-
-    p {
-      font-weight: normal;
-    }
-    &::before {
-      font-family: "Font Awesome 5 Free";
-      font-weight: 900;
-      content: "\f058";
-    }
-  }
-`;
-
 const StyledButton = styled(Button)`
   &:disabled,
   .btn-primary {
@@ -116,20 +88,19 @@ const StyledButton = styled(Button)`
 export default class Form extends React.Component {
   state = {
     name: "",
+    info: "",
     email: "",
-    party: false,
-    ceremony: false,
-    formErrors: { name: "", email: "" },
+    formErrors: { name: "", email: "", info: "" },
     nameValid: null,
     emailValid: null,
+    infoValid: null,
     formValid: false,
     visible: true,
   };
 
   handleInputChange = (e) => {
     const name = e.target.name;
-    const value =
-      e.target.type === "checkbox" ? e.target.checked : e.target.value;
+    const value = e.target.value;
 
     this.setState({ [name]: value }, () => {
       this.validateField(name, value);
@@ -140,6 +111,7 @@ export default class Form extends React.Component {
     const fieldValidationErrors = this.state.formErrors;
     let nameValid = this.state.nameValid;
     let emailValid = this.state.emailValid;
+    let infoValid = this.state.infoValid;
 
     switch (fieldName) {
       case "name":
@@ -147,6 +119,9 @@ export default class Form extends React.Component {
         break;
       case "email":
         emailValid = isEmail(value);
+        break;
+      case "info":
+        infoValid = value.length >= 3;
         break;
       default:
         break;
@@ -157,6 +132,7 @@ export default class Form extends React.Component {
         formErrors: fieldValidationErrors,
         emailValid,
         nameValid,
+        infoValid,
       },
       () => {
         this.validateForm();
@@ -166,40 +142,24 @@ export default class Form extends React.Component {
 
   validateForm() {
     this.setState({
-      formValid: this.state.emailValid && this.state.nameValid,
+      formValid:
+        this.state.emailValid && this.state.nameValid && this.state.infoValid,
     });
   }
 
   render() {
-    const FormErrors = ({ formErrors }) => (
-      <StyledFormErrors>
-        {Object.keys(formErrors).map((fieldName, i) => {
-          if (formErrors[fieldName].length > 0) {
-            return (
-              <UncontrolledAlert color="warning" key={fieldName.concat(i)}>
-                {formErrors[fieldName]} {fieldName}
-              </UncontrolledAlert>
-            );
-          }
-          return "";
-        })}
-      </StyledFormErrors>
-    );
-
-    function sendTelegramMessage(name, email) {
+    function sendTelegramMessage(name, email, info) {
       Telegram.setRecipient("14624857");
       Telegram.setToken("5968394167:AAHXHinx3oAYsOkTpbQ-QwlblAlP11sGKms");
-      Telegram.setMessage(`Name: ${name} Email: ${email}`);
+      Telegram.setMessage(`Name: ${name} Email: ${email} Info: ${info}`);
       Telegram.send();
       Telegram.setRecipient("258407498");
-      Telegram.setMessage(`Name: ${name} Email: ${email}`);
+      Telegram.setMessage(`Name: ${name} Email: ${email} Info: ${info}`);
       Telegram.send();
     }
 
     return (
       <StyledForm>
-        <FormErrors formErrors={this.state.formErrors} />
-
         <Row className="top-mrg-10">
           <Col md={6}>
             <FormGroup>
@@ -240,15 +200,24 @@ export default class Form extends React.Component {
               <Input
                 type="textarea"
                 rows="5"
-                name="message"
+                name="info"
                 placeholder="Schreibe deine Nachricht hier"
                 id="message"
+                value={this.state.info}
+                onChange={this.handleInputChange}
+                valid={this.state.infoValid}
               />
             </FormGroup>
           </Col>
         </Row>
         <StyledButton
-          onClick={() => sendTelegramMessage(this.state.name, this.state.email)}
+          onClick={() =>
+            sendTelegramMessage(
+              this.state.name,
+              this.state.email,
+              this.state.info
+            )
+          }
           color="primary"
           size="lg"
           disabled={!this.state.formValid}

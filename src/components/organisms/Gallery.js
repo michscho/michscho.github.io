@@ -7,17 +7,15 @@ const SectionGallery = () => (
         <div className="col-md-8 col-md-offset-2 col-xs-12 text-center">
           <div className="title-block">
             <h1>
-              Photo{' '}
+              Foto{' '}
               <span>
-                <em>Gallery</em>
+                <em>Gallerie</em>
               </span>
             </h1>
             <div className="divider" />
             <p>
               <em>
-                Dolor sit amet, consectetur adipiscing elit. Mauris porttitor non sem eu faucibus.
-                Aenean pellentesque dui tincidunt, dictum massa congue, euismod ipsum. Duis auctor
-                in est ac dignissim.
+                Unsere Bilder.
               </em>
             </p>
             <div className="gallery_nav">

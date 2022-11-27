@@ -21,6 +21,7 @@ const Title = styled.h3`
   }
   @media (max-width: 767px) {
     font-size: 18px;
+    margin-top: 30px;
     margin-bottom: 30px;
   }
 `;
