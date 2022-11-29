@@ -1,0 +1,25 @@
+name: Notify on failed job
+description: Send a message to dev channel when the job fails.
+inputs:
+  webhook-uri:
+    description: The Teams incoming webhook URI.
+    required: true
+  environment:
+    description: The environment affected by this job, if any.
+    required: false
+    default: ""
+runs:
+  using: composite
+  steps:
+    - uses: slackapi/slack-github-action@v1.23.0
+      name: Notify on failure
+      if: ${{ failure() }}
+      with:
+        payload: |
+          {
+            "service": "szde-homie",
+            "user": "${{ github.actor }}",
+            "text": "Workflow failed: ${{ github.event.head_commit.url }}",
+          }
+      env:
+        SLACK_WEBHOOK_URL: ${{ inputs.environment }}

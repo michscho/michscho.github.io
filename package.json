@@ -4,7 +4,6 @@
   "private": true,
   "proxy": "http://localhost:9000",
   "dependencies": {
-    "telegram-send-message": "0.0.4",
     "body-parser": "^1.18.2",
     "bootstrap": "^4.0.0",
     "cryptr": "^3.0.0",
@@ -31,6 +30,7 @@
     "react-transition-group": "^2.2.1",
     "reactstrap": "^5.0.0-beta",
     "styled-components": "^3.1.6",
+    "telegram-send-message": "0.0.4",
     "validator": "^9.4.1"
   },
   "scripts": {
@@ -39,7 +39,8 @@
     "build": "CI=false && react-scripts build",
     "build:surge": "surge build hoch-zeit.surge.sh",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "jestTest": "jest"
   },
   "devDependencies": {
     "eslint": "4.3.0",
@@ -47,6 +48,7 @@
     "eslint-plugin-import": "2.7.0",
     "eslint-plugin-jsx-a11y": "5.1.1",
     "eslint-plugin-react": "7.1.0",
+    "jest": "^29.3.1",
     "prettier-eslint": "^8.0.0"
   },
   "browserslist": [
