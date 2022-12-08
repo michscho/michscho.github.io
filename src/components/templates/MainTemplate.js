@@ -1,13 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Switch, Route, Redirect } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
 import cookie from "react-cookies";
 
 import Header from "../organisms/Header";
 import Footer from "../organisms/Footer";
 
-import Login from "../pages/LoginPage";
 import Home from "../pages/HomePage";
 import TimeLine from "../pages/TimeLinePage";
 import Gallery from "../pages/GalleryPage";

@@ -24,7 +24,7 @@ const SectionRSVP = () => (
             <div className="divider" />
             <p>
               <em>
-              Bitte gebe Uns Bescheid, ob du kommen kannst, vielen Dank!
+              Bitte gib Uns bis zum 1.6 Bescheid, ob du kommen kannst, vielen Dank!
               </em>
             </p>
           </div>

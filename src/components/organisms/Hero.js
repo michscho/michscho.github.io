@@ -130,7 +130,7 @@ const SectionHome = () => (
           <Col xs={12}>
             <Title>
               <span />
-              Wir haben JA gesagt!
+              Wir haben geheiratet!
               <span />
             </Title>
             <Names>

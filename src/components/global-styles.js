@@ -2,7 +2,7 @@ import { injectGlobal } from "styled-components";
 
 const globalStyles = () => injectGlobal`
 body {
-  color: #7b7571;
+  color: "black";
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
 }
@@ -34,8 +34,9 @@ h6 span {
 }
 
 .title-block {
-  margin: 0px auto 70px auto;
+  margin: 60px auto 70px auto;
   text-align: center;
+  align-items: center;
 }
 .title-block .divider {
   border-bottom: solid 2px #c3a180;
@@ -223,10 +224,25 @@ h6 span {
   color: #c3a180;
 }
 
+.findeUns {
+  background: #f4f4f4;
+}
+
+.car {
+  padding-bottom: 20px;
+}
+
+.car2 {
+  padding-bottom: 20px;
+  padding-left: 100px;
+
+}
+
 
 .gallery_nav {
   text-align: center;
   padding-top: 20px;
+  margin-bottom: 290px;
 }
 .port-image {
   width: 100%;

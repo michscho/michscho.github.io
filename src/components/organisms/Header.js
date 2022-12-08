@@ -1,14 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-import styled from 'styled-components';
-import { NavLink } from 'react-router-dom';
+import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
-import Sticky from 'react-stickynode';
-import { Container, Navbar, Nav, NavbarToggler, Collapse } from 'reactstrap';
+import Sticky from "react-stickynode";
+import { Container, Navbar, Nav, NavbarToggler, Collapse } from "reactstrap";
 
 const StyledNavbar = styled(Navbar)`
-  font-family: 'Oswald', Verdana, Geneva, sans-serif;
+  font-family: "Oswald", Verdana, Geneva, sans-serif;
   font-size: 20px;
   z-index: 998;
   width: 100%;
@@ -35,7 +35,7 @@ const StyledLink = styled(NavLink)`
     background-color: transparent;
   }
   &::after {
-    content: '/';
+    content: "/";
     padding-left: 10px;
     color: rgba(0, 0, 0, 0.2);
   }
@@ -152,17 +152,17 @@ export default class Header extends React.Component {
   };
 
   authButton = () =>
-    (this.props.fakeAuth.isAuthenticated ? (
+    this.props.fakeAuth.isAuthenticated ? (
       <LogoutButton
         onClick={() => {
-          this.props.fakeAuth.signout(() => this.props.history.push('/'));
+          this.props.fakeAuth.signout(() => this.props.history.push("/"));
         }}
       >
         Logout
       </LogoutButton>
     ) : (
       <p>You are not logged in.</p>
-    ));
+    );
 
   render() {
     return (
@@ -190,7 +190,7 @@ export default class Header extends React.Component {
                   </li>
                   <li>
                     <StyledLink activeClassName="active" to="/accommodation">
-                      Unterkunft
+                      Weitere Infos
                     </StyledLink>
                   </li>
                   <li>

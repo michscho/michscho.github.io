@@ -49,6 +49,9 @@
     "eslint-plugin-react": "7.1.0",
     "prettier-eslint": "^8.0.0"
   },
+  "volta": {
+    "node": "16.13.0"
+  },
   "browserslist": [
     ">0.2%",
     "not dead",

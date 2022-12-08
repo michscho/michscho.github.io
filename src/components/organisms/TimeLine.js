@@ -248,7 +248,7 @@ const SectionTimeLine = () => (
             </div>
             <TimeLineBody className="text-center">
               <img
-                src="https://scontent-muc2-1.xx.fbcdn.net/v/t39.30808-6/308109006_422925329916113_5436940080415561538_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=os-lMEXup-MAX910lF3&_nc_ht=scontent-muc2-1.xx&oh=00_AfB26Vvc6MwTiBJXO2RoLcm6K50ae7rDcLVy7q3uht-CdA&oe=6386FEDD"
+                src="https://secretldn.com/wp-content/uploads/2019/05/shutterstock_1342996358-2-1024x683.jpg"
                 className="img-fluid"
                 alt="Our Story"
               />

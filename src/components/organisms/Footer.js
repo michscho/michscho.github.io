@@ -1,11 +1,10 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import { Container, Row, Col } from 'reactstrap';
-
+import { Container, Row, Col } from "reactstrap";
 
 const StyledSection = styled.section`
-  position: ${props => (props.fixed ? 'fixed !important' : 'relative')};
+  position: ${(props) => (props.fixed ? "relative" : "relative")};
   padding: 50px 0px;
   width: 100%;
   bottom: 0;
@@ -54,8 +53,7 @@ const Circle = styled.li`
   }
 `;
 
-
-const Footer = props => (
+const Footer = (props) => (
   <StyledSection fixed={props.fixed} className="bg-gray-3">
     <Container>
       <Row>
