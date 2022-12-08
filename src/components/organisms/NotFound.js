@@ -8,11 +8,6 @@ import notFound2 from "../../405.svg";
 const StyledSection = styled.section`
   padding-top: 50px;
 `;
-const Styled404 = styled.h3`
-  font-size: 140px;
-  color: #777;
-  font-weight: 600;
-`;
 const NotFoundPage = () => (
   <div>
     <StyledSection>
@@ -23,7 +18,7 @@ const NotFoundPage = () => (
               <h2>
                 Welche{" "}
                 <span>
-                  <em>Übernachtungsmöglichkeiten</em>
+                  <em>Übernachtungs &shy; möglichkeiten</em>
                 </span>{" "}
                 gibt es?
               </h2>
