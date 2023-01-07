@@ -96,6 +96,7 @@ export default class Form extends React.Component {
     infoValid: null,
     formValid: false,
     visible: true,
+    formSubmitted: false,
   };
 
   handleInputChange = (e) => {
@@ -147,15 +148,20 @@ export default class Form extends React.Component {
     });
   }
 
+  sendTelegramMessage = (name, email, info) => {
+    Telegram.setRecipient("14624857");
+    Telegram.setToken("5968394167:AAHXHinx3oAYsOkTpbQ-QwlblAlP11sGKms");
+    Telegram.setMessage(`Name: ${name} Email: ${email} Info: ${info}`);
+    Telegram.send();
+    Telegram.setRecipient("258407498");
+    Telegram.setMessage(`Name: ${name} Email: ${email} Info: ${info}`);
+    Telegram.send();
+    this.setState({ formSubmitted: true });
+  };
+
   render() {
-    function sendTelegramMessage(name, email, info) {
-      Telegram.setRecipient("14624857");
-      Telegram.setToken("5968394167:AAHXHinx3oAYsOkTpbQ-QwlblAlP11sGKms");
-      Telegram.setMessage(`Name: ${name} Email: ${email} Info: ${info}`);
-      Telegram.send();
-      Telegram.setRecipient("258407498");
-      Telegram.setMessage(`Name: ${name} Email: ${email} Info: ${info}`);
-      Telegram.send();
+    if (this.state.formSubmitted) {
+      return <div>Submitted</div>;
     }
 
     return (
@@ -212,7 +218,7 @@ export default class Form extends React.Component {
         </Row>
         <StyledButton
           onClick={() =>
-            sendTelegramMessage(
+            this.sendTelegramMessage(
               this.state.name,
               this.state.email,
               this.state.info

@@ -62,7 +62,7 @@ const NotFoundPage = () => (
 
           <Col md={5} xs={12} className="text-center">
             <h1>Finde uns:</h1>
-            Sperberstraße 6, 97422 Schweinfurt
+            Hotel Freihof, Freihofgasse 3, Prichsenstadt
           </Col>
           <Col md={7} xs={12} className="">
             <img src={notFound} className="img-fluid, car" />

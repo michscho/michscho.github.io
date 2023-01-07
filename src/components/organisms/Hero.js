@@ -145,8 +145,8 @@ const SectionHome = () => (
               15<span>:00 Uhr</span>
             </Hour>
             <Place>
-              <h3>Schweinfurt</h3>
-              <p>Sperberstraße 6</p>
+              <h3>Prichsenstadt</h3>
+              <p>Hotel Freihof, Freihofgasse 3</p>
             </Place>
           </Col>
         </Row>
