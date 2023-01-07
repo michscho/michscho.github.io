@@ -1,9 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row, Col } from "reactstrap";
 
-import Form from '../molecules/Form';
+import Form from "../molecules/Form";
 
 const StyledSection = styled.section`
   padding: 120px 0px;
@@ -16,7 +16,7 @@ const SectionRSVP = () => (
         <Col md={{ size: 10, offset: 1 }} xs={12} className="text-center">
           <div className="title-block">
             <h1>
-              Nimmst du{' '}
+              Nimmst du{" "}
               <span>
                 <em>teil?</em>
               </span>
@@ -24,7 +24,8 @@ const SectionRSVP = () => (
             <div className="divider" />
             <p>
               <em>
-              Bitte gib Uns bis zum 1.6 Bescheid, ob du kommen kannst, vielen Dank!
+                Bitte gib Uns bis zum <b>01.06.23</b> Bescheid, ob du kommen
+                kannst, vielen Dank!
               </em>
             </p>
           </div>

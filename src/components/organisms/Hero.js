@@ -130,7 +130,7 @@ const SectionHome = () => (
           <Col xs={12}>
             <Title>
               <span />
-              Wir haben geheiratet!
+              Herzliche Einladung zu unserer Hochzeit!
               <span />
             </Title>
             <Names>
@@ -139,7 +139,7 @@ const SectionHome = () => (
               <li> Robert</li>
             </Names>
             <Date>
-              <span>22. </span> Juli 2023
+              <span>27. </span> Mai 2023
             </Date>
             <Hour>
               15<span>:00 Uhr</span>
