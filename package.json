@@ -2,7 +2,7 @@
   "name": "hochzeit",
   "version": "1.0.0",
   "private": true,
-  "proxy": "http://localhost:9000",
+  "proxy": "http://localhost:3001/",
   "dependencies": {
     "telegram-send-message": "0.0.4",
     "body-parser": "^1.18.2",

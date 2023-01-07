@@ -11,6 +11,7 @@ const Profile = styled.div`
 
 const ImageCircle = styled.img`
   border: 20px solid #fff;
+  max-height: 500px;
 `;
 const StyledSection = styled.section`
   padding: 120px 0px;
@@ -23,22 +24,20 @@ const SectionCouple = () => (
         <Col md={6} xs={12} className="text-center">
           <Profile>
             <h2>
-              Annika <span>Ernst</span>
+              Annika <span>&</span> Robert
             </h2>
             <ImageCircle
-              src="http://via.placeholder.com/323x323"
+              src="images/AnnikaRobert.jpg"
               className="img-fluid rounded-circle"
-              alt="Bride"
+              alt="Annika & Robert"
             />
           </Profile>
         </Col>
         <Col md={6} xs={12} className="text-center">
           <Profile>
-            <h2>
-              Robert <span>Ernst</span>
-            </h2>
+            <h2>Ihr Ring</h2>
             <ImageCircle
-              src="http://via.placeholder.com/323x323"
+              src="images/Ring.jpg"
               className="img-fluid rounded-circle"
               alt="Groom"
             />

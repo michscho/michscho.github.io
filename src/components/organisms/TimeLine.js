@@ -150,8 +150,8 @@ const SectionTimeLine = () => (
             <div className="divider" />
             <p>
               <em>
-                Wir haben geheiratet! Das möchten wir gerne am <b>22.07.2023</b>{" "}
-                mit einer Gartenparty bei Familie Schott feiern.
+                Das möchten wir gerne am <b>27.05.2023</b> im Hotel Freihof in
+                Prichsenstadt mit Euch feiern!
               </em>
             </p>
           </div>

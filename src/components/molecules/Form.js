@@ -70,6 +70,7 @@ const StyledLabel = styled(Label)`
 `;
 
 const StyledButton = styled(Button)`
+  margin-left: 10px;
   &:disabled,
   .btn-primary {
     cursor: not-allowed;
@@ -229,6 +230,20 @@ export default class Form extends React.Component {
           disabled={!this.state.formValid}
         >
           Ich nehme teil.
+        </StyledButton>
+        <StyledButton
+          onClick={() =>
+            this.sendTelegramMessage(
+              `Nimmt nicht mit teil: ${this.state.name}`,
+              this.state.email,
+              this.state.info
+            )
+          }
+          color="primary"
+          size="lg"
+          disabled={!this.state.formValid}
+        >
+          Ich nehme NICHT teil.
         </StyledButton>
       </StyledForm>
     );
