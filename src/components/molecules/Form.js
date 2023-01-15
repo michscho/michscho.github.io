@@ -208,7 +208,7 @@ export default class Form extends React.Component {
                 type="textarea"
                 rows="5"
                 name="info"
-                placeholder="Schreibe deine Nachricht hier"
+                placeholder="Personenanzahl (Erwachsene) + Kinder über 3 Jahre"
                 id="message"
                 value={this.state.info}
                 onChange={this.handleInputChange}
