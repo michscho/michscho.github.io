@@ -210,6 +210,7 @@ h6 span {
 .btn-primary.btn-bordered:active:focus,
 .btn-primary.btn-bordered.active {
   background: #c3a180;
+  margin-bottom: 5px;
   border: solid 2px #c3a180;
   color: #fff;
 }
